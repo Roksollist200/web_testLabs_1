@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Зоопарк</title>
+    <link rel="stylesheet" href="/src/components/animals.css">
+    <style>
+        body{
+            background-color: aquamarine;
+            font-family: "Britannic Bold";
+        }
+        .header{
+            background-color: green;
+            text-align: center;
+            color: #181818;
+        }
+        .info_card {
+            background-color: darkseagreen;
+            box-shadow: 0 0 10px #888888;
+            //display: inline-block;
+            border-radius: 20px;
+            padding: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+        }
+        .card_status{
+            font-size: 25px;
+            color: darkslategrey;
+            margin-bottom:5px;
+        }
+        .info_animals{
+            font-size: 25px;
+            color: darkslategrey;
+            margin-bottom:5px;
+        }
+        .card_title{
+            font-size: 30px;
+            color: black;
+            margin-bottom:10px;
+        }
+        .card_year{
+            font-weight:bold;
+        }
+        .action{
+            font-weight:bold;
+            color:red;
+
+        }
+        .card_img{
+            width: 80px;
+            height: 80px;
+            border-radius: 40%;
+            align-content: center;
+        }
+        .grid{
+            width: 70%;
+            display: grid;
+            margin: 0 auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+            /* justify-items: center;*/
+            align-items: stretch;
+
+        }
+        .btn-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 30px;
+            color: blue;
+            transition: 0.3s;
+        }
+        .btn-icon:hover {
+            color: #ff0000;
+        }
+        .footer{
+            background-color: darkgreen;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        button[data-action = "del"]{
+            background-color: aqua;
+            border-radius: 15px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <h1> Весёлый зоопарк</h1>
+</header>
+<div data-container ="0" class="grid">
+    <div class="info_card">
+        <span class="btn-close">X</span>
+        <img src = "tiger.jpg" alt = "Базилик" class = "card_img">
+        <div class="card_title">Белый тигр</div>
+        <div class="card_status"> В зоопарке с <span class = "card__year">2004</span></div>
+        <div class="info_animals">Кличка: Базилик. Любит повалятся на солнышке</div>
+    </div>
+    <div class="info_card">
+        <span class="btn-close">X</span>
+        <img src = "girafe.jpg" alt = "Пятнышко" class = "card_img">
+        <div class="card_title">Жираф</div>
+        <div class="card_status"> В зоопарке с <span class = "card__year">2018</span></div>
+        <div class="info_animals">Кличка: Пятнышко. Любит фотографироваться и смотреть на всех свысока</div>
+    </div>
+    <div class="info_card">
+        <span class="btn-close">X</span>
+        <img src = "zebra.jpg" alt = "Пятнышко" class = "card_img">
+        <div class="card_title">Зебра</div>
+        <div class="card_status"> В зоопарке с <span class = "card_year">2010</span></div>
+        <div class="info_animals">Кличка: Марти. Белый в черную полоску</div>
+    </div>
+    <div class="info_card">
+        <span class="btn-close">X</span>
+        <img src = "elephant.jpg" alt = "Джамбо" class = "card_img">
+        <div class="card_title">Слон</div>
+        <div class="card_status"> В зоопарке с <span class = "card_year">2002</span></div>
+        <div class="info_animals">Кличка: Джамбо. Дружелюбный. <span class = "action">Осторожно </span> может полить их хобота</div>
+    </div>
+    <div class="info_card">
+        <span class="btn-close">X</span>
+        <img src ="Po.jpg" alt = "По" class = "card_img">
+        <div class="card_title">Панда</div>
+        <div class="card_status"> В зоопарке с <span class = "card_year">2025</span></div>
+        <div class="info_animals">Кличка: По. Мастер по поеданию пельмешек. </div>
+    </div>
+    <div class="info_card">
+        <span class="btn-close">X</span>
+        <img src ="pin.jpg" alt = "Пингвин" class = "card_img">
+        <div class="card_title">Пингвин</div>
+        <div class="card_status"> В зоопарке с <span class = "card_year">2006</span></div>
+        <div class="info_animals">Кличка: Ковальский. Любит рыбку и квесты. </div>
+    </div>
+    <div class="info_card">
+        <span class="btn-close">X</span>
+        <img src ="Bars.jpg" alt = "Барс" class = "card_img">
+        <div class="card_title">Снежный барс</div>
+        <div class="card_status"> В зоопарке с <span class = "card_year">2017</span></div>
+        <div class="info_animals">Кличка: Ириска. Обожает зиму и снег. </div>
+    </div>
+    <div class="info_card">
+        <span class="btn-close">X</span>
+        <img src ="beer.jpg" alt = "Медведб" class = "card_img">
+        <div class="card_title">Бурый медведь</div>
+        <div class="card_status"> В зоопарке с <span class = "card_year">2001</span></div>
+        <div class="info_animals">Кличка: Потапыч. Главный эксперт по мёду и долгому сну. </div>
+    </div>
+    <div class="info_card">
+        <span class="btn-close">X</span>
+        <img src ="gena.jpg" alt = "Крокодил" class = "card_img">
+        <div class="card_title">Русский крокодил</div>
+        <div class="card_status"> В зоопарке с <span class = "card_year">2009</span></div>
+        <div class="info_animals">Кличка: Гена. Персонаж с самой широкой улыбкой в зоопарке. Лучший друг Чебурашки </div>
+    </div>
+    <button data-action="add" data-target="0">Добавить</button>
+</div>
+<footer class="footer">
+    <button data-action="del" data-target="0">Удалить всё из зоопарка</button>
+</footer>
+<script>
+    const btns = document.querySelectorAll('[data-action]');
+    const containers = document.querySelectorAll('[data-container]');
+    btns.forEach(i=> {
+        i.onclick = () => {
+            const conNum = i.dataset['target']
+            const con = Array.from(containers).find(j => j.dataset.container === conNum);
+            const actions = {
+                add: () => {
+                    const el = document.createElement('div');
+                    el.className = 'info_card';
+                    el.innerHTML =' <span class="btn-close">X</span>\n'+
+                        '<img src="what.jpg" class="card_img">\n'+
+                        '<div class="card_title">Новый зверь</div>\n'+
+                        '<div class="card_status">В зоопарке с 2026</div>\n'+
+                        '<div class="info_animals">Описание нового зверя.</div>\n'+
+                        '</div>'
+                    el.querySelector('.btn-close').onclick = () => el.remove();
+                    con.insertBefore(el, i);
+                },
+                del: () => {
+                    con.querySelectorAll('.info_card').forEach(card => card.remove());
+                }
+            };
+            actions[i.dataset.action]();
+        };
+    });
+    document.querySelectorAll('.info_card').forEach(card => {
+        const close = card.querySelector('.btn-close');
+        if (close) close.onclick = () => card.remove();
+    });
+</script>
+</body>
+</html>
